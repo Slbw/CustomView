@@ -14,6 +14,9 @@
 		D128F5831B476F3000B7B578 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D128F5821B476F3000B7B578 /* Images.xcassets */; };
 		D128F5861B476F3000B7B578 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D128F5841B476F3000B7B578 /* LaunchScreen.xib */; };
 		D128F5921B476F3000B7B578 /* CustomViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D128F5911B476F3000B7B578 /* CustomViewTests.m */; };
+		D128F59E1B47709E00B7B578 /* HSOption.m in Sources */ = {isa = PBXBuildFile; fileRef = D128F59D1B47709E00B7B578 /* HSOption.m */; };
+		D128F5A21B478B0400B7B578 /* HSOption.xib in Resources */ = {isa = PBXBuildFile; fileRef = D128F5A11B478B0400B7B578 /* HSOption.xib */; };
+		D128F5A81B47F09800B7B578 /* HSQuestionView.m in Sources */ = {isa = PBXBuildFile; fileRef = D128F5A71B47F09800B7B578 /* HSQuestionView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,11 @@
 		D128F58B1B476F3000B7B578 /* CustomViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D128F5901B476F3000B7B578 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D128F5911B476F3000B7B578 /* CustomViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomViewTests.m; sourceTree = "<group>"; };
+		D128F59C1B47709E00B7B578 /* HSOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSOption.h; sourceTree = "<group>"; };
+		D128F59D1B47709E00B7B578 /* HSOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSOption.m; sourceTree = "<group>"; };
+		D128F5A11B478B0400B7B578 /* HSOption.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HSOption.xib; sourceTree = "<group>"; };
+		D128F5A61B47F09800B7B578 /* HSQuestionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSQuestionView.h; sourceTree = "<group>"; };
+		D128F5A71B47F09800B7B578 /* HSQuestionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSQuestionView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +89,8 @@
 		D128F5741B476F3000B7B578 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				D128F5A31B47A54200B7B578 /* model */,
+				D128F59B1B47707B00B7B578 /* views */,
 				D128F5791B476F3000B7B578 /* AppDelegate.h */,
 				D128F57A1B476F3000B7B578 /* AppDelegate.m */,
 				D128F57C1B476F3000B7B578 /* ViewController.h */,
@@ -117,6 +127,25 @@
 				D128F5901B476F3000B7B578 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D128F59B1B47707B00B7B578 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				D128F59C1B47709E00B7B578 /* HSOption.h */,
+				D128F59D1B47709E00B7B578 /* HSOption.m */,
+				D128F5A11B478B0400B7B578 /* HSOption.xib */,
+				D128F5A61B47F09800B7B578 /* HSQuestionView.h */,
+				D128F5A71B47F09800B7B578 /* HSQuestionView.m */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
+		D128F5A31B47A54200B7B578 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D128F5811B476F3000B7B578 /* Main.storyboard in Resources */,
+				D128F5A21B478B0400B7B578 /* HSOption.xib in Resources */,
 				D128F5861B476F3000B7B578 /* LaunchScreen.xib in Resources */,
 				D128F5831B476F3000B7B578 /* Images.xcassets in Resources */,
 			);
@@ -220,6 +250,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D128F57E1B476F3000B7B578 /* ViewController.m in Sources */,
+				D128F59E1B47709E00B7B578 /* HSOption.m in Sources */,
+				D128F5A81B47F09800B7B578 /* HSQuestionView.m in Sources */,
 				D128F57B1B476F3000B7B578 /* AppDelegate.m in Sources */,
 				D128F5781B476F3000B7B578 /* main.m in Sources */,
 			);
