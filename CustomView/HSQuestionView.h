@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  HSQuestionView.h
 //  CustomView
 //
 //  Created by vera wang on 15/7/4.
@@ -7,10 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HSOption.h"
 
-@interface ViewController : UIViewController
-
+@interface HSQuestionView : UIView
 
 
 @end
-
