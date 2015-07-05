@@ -72,7 +72,6 @@
         [option setTag:i+2];
         str = [str stringByAppendingString:@"大家好，我是vae大家大家好，我是vae"];
         [option setContent:str withMode:Single atIndex:i];
-        option.userInteractionEnabled = YES;
         [option addGestureRecognizer:tapGesture];//添加点击监听
         //        option.translatesAutoresizingMaskIntoConstraints = NO;
         [self addSubview:option];
@@ -83,10 +82,12 @@
 //添加单选选项
 -(void) addMultiOption:(CGFloat)tempHeight
 {
-    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(onClick:)];
+    
     NSString *str=@"";
+    CGFloat lastHeight=0;
     for(int i=0;i<4;i++)
     {
+        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(onClick:)];
         UIView *optionLast=[self viewWithTag:i+1];
         CGFloat contentHeight=tempHeight;
         if(optionLast!=nil)
@@ -94,15 +95,17 @@
             contentHeight=optionLast.frame.origin.y+optionLast.frame.size.height+10;
             
         }
-        HSOption *option=[[HSOption alloc]initWithFrame:CGRectMake(self.frame.origin.x+10,contentHeight, self.frame.size.width-20, self.frame.size.height)];
+        HSOption *option=[[HSOption alloc]initWithFrame:CGRectMake(self.frame.origin.x+10,contentHeight, self.frame.size.width-20, 0)];
         [option setTag:i+2];
         str = [str stringByAppendingString:@"大家好，我是vae大家大家好，我是vae"];
         [option setContent:str withMode:Multiable atIndex:i];
-        option.userInteractionEnabled = YES;
         [option addGestureRecognizer:tapGesture];//添加点击监听
         //        option.translatesAutoresizingMaskIntoConstraints = NO;
         [self addSubview:option];
+
     }
+//    UIView *optionLast=[self viewWithTag:3+2];
+//        [self setFrame:CGRectMake(self.frame.origin.x,self.frame.origin.y, self.frame.size.width,optionLast.frame.size.height+optionLast.frame.origin.y+80)];
     
 }
 
@@ -112,6 +115,7 @@
     if([recognizer.view isKindOfClass:[HSOption class]])
     {
         NSLog(((HSOption *)recognizer.view).chooseContent.text);
+        
     }
 }
 

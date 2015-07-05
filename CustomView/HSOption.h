@@ -36,4 +36,5 @@ typedef enum{
 -(void)setContent:(NSString*)str withMode:(OptionMode)mode atIndex:(NSInteger) index;
 
 
+
 @end
