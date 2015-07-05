@@ -13,7 +13,8 @@
 @interface ViewController ()
 
 //@property HSOption *option;
-@property HSQuestionView *questionView;
+
+@property (strong,nonatomic) HSQuestionView *questionView;
 
 @end
 
